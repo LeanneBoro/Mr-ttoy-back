@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "t202",
+        "name": "Singing Doll",
+        "price": "123",
+        "labels": "['Doll', 'Battery Powered', 'Baby']",
+        "createdAt": "1631031801011",
+        "inStock": "true"
+    },
+    {
+        "name": "lolo",
+        "price": 88,
+        "_id": "mdAJh"
+    },
+    {
+        "name": "hy",
+        "price": 198,
+        "_id": "CCh4l"
+    }
+]
