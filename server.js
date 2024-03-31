@@ -6,8 +6,8 @@ import cors from 'cors'
 
 
 
-import { logger } from './services/logger.service.js'
-logger.info('server.js loaded...')
+import { loggerService } from './services/logger.service.js'
+loggerService.info('server.js loaded...')
 
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -53,5 +53,5 @@ app.get('/**', (req, res) => {
 const port = process.env.PORT || 3030
 
 app.listen(port, () => {
-  logger.info('Server is running on port: ' + port)
+    loggerService.info('Server is running on port: ' + port)
 })

@@ -1,5 +1,5 @@
 import { dbService } from '../../services/db.service.js'
-import { logger } from '../../services/logger.service.js'
+import { loggerService } from '../../services/logger.service.js'
 import { utilService } from '../../services/util.service.js'
 import mongodb from 'mongodb'
 const { ObjectId } = mongodb
@@ -19,7 +19,7 @@ async function query(filterBy, sortBy) {
     // console.log('toys', toys)
     return toys
   } catch (err) {
-    logger.error('cannot find toys', err)
+    loggerService.error('cannot find toys', err)
     throw err
   }
 }
@@ -30,7 +30,7 @@ async function getById(toyId) {
     const toy = collection.findOne({ _id: new ObjectId(toyId) })
     return toy
   } catch (err) {
-    logger.error(`while finding toy ${toyId}`, err)
+    loggerService.error(`while finding toy ${toyId}`, err)
     throw err
   }
 }
@@ -41,7 +41,7 @@ async function remove(toyId) {
     const collection = await dbService.getCollection('toy')
     await collection.deleteOne({ _id: new ObjectId(toyId) })
   } catch (err) {
-    logger.error(`cannot remove toy ${toyId}`, err)
+    loggerService.error(`cannot remove toy ${toyId}`, err)
     throw err
   }
 }
@@ -53,7 +53,7 @@ async function add(toy) {
     toy._id = insertedId
     return toy
   } catch (err) {
-    logger.error('cannot insert toy', err)
+    loggerService.error('cannot insert toy', err)
     throw err
   }
 }
@@ -73,7 +73,7 @@ async function update(toy) {
     )
     return toy
   } catch (err) {
-    logger.error(`cannot update toy ${toy._id}`, err)
+    loggerService.error(`cannot update toy ${toy._id}`, err)
     throw err
   }
 }
@@ -90,7 +90,7 @@ async function addToyMsg(toyId, msg) {
     )
     return msg
   } catch (err) {
-    logger.error(`cannot add toy msg ${toyId}`, err)
+    loggerService.error(`cannot add toy msg ${toyId}`, err)
     throw err
   }
 }
@@ -104,7 +104,7 @@ async function removeToyMsg(toyId, msgId) {
     )
     return msgId
   } catch (err) {
-    logger.error(`cannot remove toy msg ${toyId}`, err)
+    loggerService.error(`cannot remove toy msg ${toyId}`, err)
     throw err
   }
 }
