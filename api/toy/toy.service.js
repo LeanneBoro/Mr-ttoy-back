@@ -9,14 +9,12 @@ async function query(filterBy, sortBy) {
   try {
     console.log('filterBy', filterBy)
     const criteria = _buildCriteria(filterBy)
-    console.log(criteria)
     const collection = await dbService.getCollection('toy')
     //sort({price:1}) from low to high
     //sort({name:1}) from a to z //sort({key:order})
     console.log('sortBy', sortBy)
 
     const toys = await collection.find(criteria).sort(sortBy).toArray()
-    // console.log('toys', toys)
     return toys
   } catch (err) {
     loggerService.error('cannot find toys', err)
@@ -53,7 +51,7 @@ async function add(toy) {
     toy._id = insertedId
     return toy
   } catch (err) {
-    loggerService.error('cannot insert toy', err)
+    logger.error('cannot insert toy', err)
     throw err
   }
 }
@@ -110,6 +108,7 @@ async function removeToyMsg(toyId, msgId) {
 }
 
 function _buildCriteria(filterBy) {
+  console.log('im being used')
   const { labels, txt, status } = filterBy
 
   const criteria = {}
@@ -132,7 +131,6 @@ function _buildCriteria(filterBy) {
     // criteria.labels =  { $all: labels }
 
     // for some for string labels
-    console.log('labels', labels)
     criteria.labels = { $in: labels } //['Doll']
   }
 

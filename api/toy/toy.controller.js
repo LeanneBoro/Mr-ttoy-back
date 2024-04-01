@@ -2,9 +2,10 @@ import { toyService } from './toy.service.js'
 import { loggerService } from '../../services/logger.service.js'
 
 export async function getToys(req, res) {
-  console.log('hi');
+  console.log(req);
+  console.log(req.query.byName)
   try {
-    console.log('req.query', req.query)
+    // console.log('req.query', req.query)
     // {
     //   byName: 'aaa',
     //   inStock: '',
@@ -12,10 +13,12 @@ export async function getToys(req, res) {
     //   byLable: [ 'Doll', 'Battery Powered' ]
     // }
     const filterBy = {
-      txt: req.query.byName || '',
+      txt: req.query.txt || '',
       status: req.query.inStock || null,
-      labels: req.query.byLable || null,
+      labels: req.query.labels || null,
     }
+
+    console.log(req.query)
 
     const sortBy = req.query.sortBy
       ? {
