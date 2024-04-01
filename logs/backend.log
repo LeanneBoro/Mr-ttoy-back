@@ -1132,3 +1132,20 @@
 1.4.2024, 19:43:57 - DEBUG - Getting Toys | {"txt":"","status":null,"labels":null}
 1.4.2024, 19:49:54 - DEBUG - Getting Toys | {"txt":"","status":null,"labels":null}
 1.4.2024, 19:49:53 - INFO - Req was made | /
+1.4.2024, 19:58:02 - INFO - server.js loaded...
+1.4.2024, 19:58:02 - INFO - Server is running on port: 3030
+1.4.2024, 19:58:19 - INFO - server.js loaded...
+1.4.2024, 19:58:19 - INFO - Server is running on port: 3030
+1.4.2024, 19:58:28 - DEBUG - auth.service - signup with username: lian, fullname: lian borowitz
+1.4.2024, 19:58:29 - DEBUG - auth.route - new account created: {"username":"lian","password":"$2b$10$jNPyb5oaqrki.o2r.cF5MO0yhKs5sYo4dGAxqAzG9DSvzbqRod9/a","fullname":"lian borowitz","score":100,"_id":"660ae7b57669a079ee2c2593"}
+1.4.2024, 19:58:29 - DEBUG - auth.service - login with username: lian
+1.4.2024, 19:58:29 - INFO - User signup: | {"_id":"660ae7b57669a079ee2c2593","username":"lian","fullname":"lian borowitz","imgUrl":null,"score":100}
+1.4.2024, 19:58:48 - WARN - lian borowitz attempted to perform admin action
+1.4.2024, 19:58:58 - DEBUG - Getting Toys | {"txt":"","status":null,"labels":null}
+1.4.2024, 19:58:58 - INFO - Req was made | /
+1.4.2024, 19:58:58 - INFO - Req was made | /
+1.4.2024, 19:58:58 - DEBUG - Getting Toys | {"txt":"","status":null,"labels":null}
+1.4.2024, 19:59:15 - DEBUG - auth.service - signup with username: puki, fullname: puki gonzaleles
+1.4.2024, 19:59:15 - DEBUG - auth.route - new account created: {"username":"puki","password":"$2b$10$o4CloN78M5oDH1R5KgjL7.s3VTT0G8vTFLMZTnuXBugtyrsRr7FZ.","fullname":"puki gonzaleles","score":100,"_id":"660ae7e37669a079ee2c2594"}
+1.4.2024, 19:59:15 - DEBUG - auth.service - login with username: puki
+1.4.2024, 19:59:15 - INFO - User signup: | {"_id":"660ae7e37669a079ee2c2594","username":"puki","fullname":"puki gonzaleles","imgUrl":null,"score":100}
